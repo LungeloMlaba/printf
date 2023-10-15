@@ -8,6 +8,7 @@ int _printf(const char * const format, ...)
 {
 	checker r[] = {
 		{"%s", printf_string}, {"%c", printf_char},
+		{"%i", printf_int}, {"%d", printf_dec}
 	};
 
 	va_list args;
@@ -21,8 +22,8 @@ int _printf(const char * const format, ...)
 	{
 		int match_found = 0;
 
-		j = 1;
-		while (j >= 0)
+		j = 0;
+		while (j < 4)
 		{
 			if (r[j].id[0] == format[i] && r[j].id[1] == format[i + 1])
 			{
@@ -31,7 +32,7 @@ int _printf(const char * const format, ...)
 				match_found = 1;
 				break;
 			}
-			j--;
+			j++;
 		}
 		if (!match_found)
 		{
