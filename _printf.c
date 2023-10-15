@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - is a function that selects the correct function to print.
  * @format: identifier to look for.
@@ -9,7 +10,9 @@ int _printf(const char * const format, ...)
 	checker r[] = {
 		{"%s", printf_string}, {"%c", printf_char},
 		{"%i", printf_int}, {"%d", printf_dec},
-		{"%b", printf_binary}
+		{"%b", printf_binary}, {"%u", printf_unsigned_int},
+		{"%o", printf_octal}, {"%x", printf_hexad},
+		{"%X", printf_HEXAD}
 	};
 
 	va_list args;
@@ -24,7 +27,7 @@ int _printf(const char * const format, ...)
 		int match_found = 0;
 
 		j = 0;
-		while (j < 5)
+		while (j < 9)
 		{
 			if (r[j].id[0] == format[i] && r[j].id[1] == format[i + 1])
 			{
