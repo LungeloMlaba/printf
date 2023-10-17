@@ -22,6 +22,13 @@ typedef struct format
 	int (*f)();
 } checker;
 
+int printf_char37(void);
+int printf_rot13(va_list args);
+int printf_reversed_string(va_list args);
+int printf_HEXAD_alt(unsigned int n);
+int printf_hexad_alt(unsigned long int n);
+int printf_pointer(va_list val);
+int printf_extra_string(va_list val);
 int printf_HEXAD(va_list val);
 int printf_hexad(va_list val);
 int printf_octal(va_list val);
