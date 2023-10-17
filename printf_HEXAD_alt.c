@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_HEX_alt - prints an hexadecimal number.
- * @num: number to print.
+ * printf_HEXAD_alt - prints an hexadecimal number
+ * @n: number to print
  * Return: num of chars printed
  */
 

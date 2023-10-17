@@ -9,7 +9,7 @@
 int printf_extra_string(va_list val)
 {
 	char *s;
-	int i; 
+	int i;
 	int l = 0;
 	int t;
 
